@@ -5,7 +5,7 @@ namespace Composant {
 
     Composant::Client::Client()
     {
-        this->id = 0;
+        this->id = -1;
         this->nom = "";
         this->prenom = "";
         //initialiser les dates à la date actuelle
@@ -43,13 +43,13 @@ namespace Composant {
     {
         return "INSERT INTO Client " +
             "(Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat)" +
-            "VALUES('" + this->get_nom() + "', '" + this->get_prenom() + "', '" + this->GetDate_naiss() + "','" + this->GetDate_pr_achat() + "');SELECT @@IDENTITY;";
+            "VALUES('" + this->get_nom() + "', '" + this->get_prenom() + "', '" + date_to_string(this->GetDate_naiss()) + "','" + date_to_string(this->GetDate_pr_achat()) + "');SELECT @@IDENTITY;";
     }
 
     String^ Composant::Client::UPDATE(void)
     {
         return "UPDATE Client " +
-            "SET Nom_C = '" + this->get_nom() + "', Prenom_C = '" + this->get_prenom() + "', Date_de_naissance = '" + this->GetDate_naiss() + "', Date_du_premier_achat = '" + this->GetDate_pr_achat() + "' " +
+            "SET Nom_C = '" + this->get_nom() + "', Prenom_C = '" + this->get_prenom() + "', Date_de_naissance = '" + date_to_string(this->GetDate_naiss()) + "', Date_du_premier_achat = '" + date_to_string(this->GetDate_pr_achat()) + "' " +
             "WHERE(ID_Client = " + this->get_id() + ");";
     }
 
@@ -57,5 +57,8 @@ namespace Composant {
     {
         return "DELETE FROM Client " +
             "WHERE(ID_Client = " + this->get_id() + ");";
+    }
+    String^ date_to_string(DateTime^ date) {
+        return date->Year + "" + date->Month + "" + date->Day;
     }
 }
