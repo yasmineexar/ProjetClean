@@ -48,6 +48,9 @@
     <ClCompile Include="Commande.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Choisir.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -78,6 +81,9 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Ville.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Choisir.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>

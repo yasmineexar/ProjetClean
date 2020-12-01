@@ -8,21 +8,21 @@ namespace Composant
 	String^ Ville::SELECT(void)
 	{
 		return "SELECT Id_Ville, Nom_ville " +
-			"FROM TB_VILLE " + ");";
+			"FROM Ville " + ");";
 	}
 	String^ Ville::INSERT(void)
 	{
-		return "INSERT INTO TB_VILLE(Nom_Ville) " +
+		return "INSERT INTO Ville (Nom_Ville) " +
 			"VALUES('" + this->Nom_Ville + "');";
 	}
 	String^ Ville::UPDATE(void)
 	{
-		return "UPDATE TB_VILLE " +
+		return "UPDATE Ville " +
 			"SET Id_Ville ='" + this->Id_Ville + "', Nom_Ville ='" + this->Nom_Ville + "'";
 	}
 	String^ Ville::DELETE(void)
 	{
-		return "DELETE FROM TB_VILLE " +
+		return "DELETE FROM Ville " +
 			"WHERE(Id_Ville = " + this->Id_Ville + ");";
 	}
 	void Ville::setIdVille(int Id_Ville)

@@ -9,22 +9,22 @@ namespace Composant
 	String^ Adresse::SELECT(void)
 	{
 		return "SELECT id_adresse, adresse, Id_ville " +
-			"FROM TB_ADRESSE " + ");";
+			"FROM Adresse " + ");";
 	}
 	String^ Adresse::INSERT(void)
 	{
-		return "INSERT INTO TB_ADRESSE(adresse, ville) " +
+		return "INSERT INTO Adresse(adresse, ville) " +
 			"VALUES('" + this->adresse + "', '" + this->Id_Ville + ");";
 	}
 	String^ Adresse::UPDATE(void)
 	{
-		return "UPDATE TB_ADRESSE " +
+		return "UPDATE Adresse " +
 			"SET ID_Adresse ='" + this->ID_Adresse + "', ville ='" + this->Id_Ville + "',' " +
 			"WHERE(ID_Adresse = " + this->ID_Adresse + "); ";
 	}
 	String^ Adresse::DELETE(void)
 	{
-		return "DELETE FROM TB_ADRESSE " +
+		return "DELETE FROM Adresse " +
 			"WHERE(ID_Adresse = " + this->ID_Adresse + ");";
 	}
 	void Adresse::setIdAdresse(int ID_Adresse)
