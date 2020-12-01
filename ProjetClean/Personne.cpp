@@ -41,21 +41,16 @@ namespace Composant {
 
     String^ Composant::Personne::SELECT(void)
     {
-        cout << "Requete SELECT" << endl;
     }
 
     String^ Composant::Personne::INSERT(void)
     {
-        cout << "Requete INSERT" << endl;
     }
 
     String^ Composant::Personne::UPDATE(void)
     {
-        cout << "Requete UPDATE" << endl;
     }
-
     String^ Composant::Personne::DELETE(void)
     {
-        cout << "Requete DELETE" << endl;
     }
 }

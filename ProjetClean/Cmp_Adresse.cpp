@@ -1,5 +1,5 @@
 #include "Cmp_Adresse.h"
-namespace Composants
+namespace Composant
 {
 	Cmp_Adresse::Cmp_Adresse(void) {
 		this->ID_Adresse = -1;

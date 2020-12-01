@@ -1,7 +1,7 @@
 //CL_mapp_TBADRESSE.h
 #pragma once
 using namespace System;
-namespace Composants
+namespace Composant
 {
 	ref class Cmp_Adresse
 	{

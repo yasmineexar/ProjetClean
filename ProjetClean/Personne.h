@@ -1,7 +1,7 @@
 #pragma once
 namespace Composant {
 	using namespace System;
-	ref class Personne //classe mère
+	ref class Personne  //classe mère
 	{
 		protected:
 			String^ nom,^prenom;
