@@ -37,7 +37,7 @@
       <Filter>Couche Composants</Filter>
     </ClCompile>
     <ClCompile Include="Article.cpp">
-      <Filter>Couche Composants</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +60,7 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Article.h">
-      <Filter>Couche Composants</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
