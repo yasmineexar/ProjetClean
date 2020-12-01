@@ -93,7 +93,8 @@ String^ Composant::Article::getCouleur(void)
 
 String^ Composant::Article::SELECT(void)
 {
-	
+	return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat" +
+		"FROM Client;";
 }
 
 String^ Composant::Article::INSERT(void)
