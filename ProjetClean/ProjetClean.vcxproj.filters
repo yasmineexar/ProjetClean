@@ -16,6 +16,9 @@
     <Filter Include="Couche Composants">
       <UniqueIdentifier>{b6cd7185-26f4-4b79-971a-a3e46cb0fa34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Couche Service">
+      <UniqueIdentifier>{f1c1bdd4-6bc7-4a86-9919-90f97b61e2b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -54,6 +57,24 @@
     <ClCompile Include="Vivre.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="SVC_Gclient.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gemploye.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gstock.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gcommande.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gstatistique.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="SVC_Gpayement.cpp">
+      <Filter>Couche Service</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -91,6 +112,24 @@
     </ClInclude>
     <ClInclude Include="Vivre.h">
       <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gclient.h">
+      <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gemploye.h">
+      <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gstock.h">
+      <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gcommande.h">
+      <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gstatistique.h">
+      <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="SVC_Gpayement.h">
+      <Filter>Couche Service</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
