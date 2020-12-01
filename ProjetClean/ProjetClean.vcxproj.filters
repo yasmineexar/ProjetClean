@@ -31,7 +31,7 @@
       <Filter>Couche Composants</Filter>
     </ClCompile>
     <ClCompile Include="Cmp_Adresse.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Couche Composants</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +48,7 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Cmp_Adresse.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
