@@ -39,8 +39,14 @@
     <ClCompile Include="Article.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Paiement.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="Ville.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
     <ClCompile Include="Commande.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Couche Composants</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,7 +72,13 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Commande.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Paiement.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Ville.h">
+      <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

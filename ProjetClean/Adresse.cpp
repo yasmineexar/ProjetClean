@@ -4,7 +4,7 @@ namespace Composant
 	Adresse::Adresse(void) {
 		this->ID_Adresse = -1;
 		this->adresse = "RIEN";
-		this->Id_Ville = "RIEN";
+		this->Id_Ville = -1;
 	}
 	String^ Adresse::SELECT(void)
 	{
@@ -36,9 +36,9 @@ namespace Composant
 		if (Adresse != "")this->adresse = Adresse;
 	}
 
-	void Adresse::setIdVille(String^ Id_Ville)
+	void Adresse::setIdVille(int Id_Ville)
 	{
-		if (Id_Ville != "")this->Id_Ville = Id_Ville;
+		if (Id_Ville > 0)this->Id_Ville = Id_Ville;
 	}
 
 	int Adresse::getIdAdresse(void)
@@ -49,8 +49,8 @@ namespace Composant
 	{
 		return this->adresse;
 	}
-	String^ Adresse::getIdVille(void)
+	int Adresse::getIdVille(void)
 	{
 		return this->Id_Ville;
 	}
-
+}

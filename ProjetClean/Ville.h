@@ -2,25 +2,21 @@
 using namespace System;
 namespace Composant
 {
-	ref class Adresse
+	ref class Ville
 	{
 	private:
-		int ID_Adresse;
-		String^ adresse;
 		int Id_Ville;
+		String^ Nom_Ville;
 
 	public:
-		Adresse(void);
+		Ville(void);
 		String^ SELECT(void);
 		String^ INSERT(void);
 		String^ UPDATE(void);
 		String^ DELETE(void);
-		void setIdAdresse(int);
-		void setAdresse(String^);
 		void setIdVille(int);
-		int getIdAdresse(void);
-		String^ getAdresse(void);
+		void setNomVille(String^);
 		int getIdVille(void);
-
+		String^ getNomVille(void);
 	};
 }
