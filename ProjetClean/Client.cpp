@@ -58,6 +58,14 @@ namespace Composant {
         return "DELETE FROM Client " +
             "WHERE(ID_Client = " + this->get_id() + ");";
     }
+    //destructeur
+    Client::~Client()
+    {
+        delete this->date_naiss;
+        delete this->date_pr_achat;
+        delete this;
+    }
+    //une methode qui transforme une date de type DateTime à une date de type String
     String^ date_to_string(DateTime^ date) {
         return date->Year + "" + date->Month + "" + date->Day;
     }

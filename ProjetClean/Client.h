@@ -18,6 +18,8 @@ namespace Composant {
 		String^ INSERT(void) override;
 		String^ UPDATE(void) override;
 		String^ DELETE(void) override;
+		//destructeur 
+		~Client();
 	};
 }
 

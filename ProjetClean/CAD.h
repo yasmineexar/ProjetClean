@@ -22,6 +22,7 @@ namespace Composants
 		int actionRowsID(String^);
 		void actionRows(String^);
 		DataSet^ getRows(String^, String^);
+		~CAD(void); //destructeur
 	};
 }
 

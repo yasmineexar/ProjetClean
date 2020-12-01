@@ -42,6 +42,7 @@ namespace Composants
         this->DA->Fill(this->DS, dataTableName);//remplir le dataset avec la table spécifiée en exécutant la requete de commande
         return this->DS;
     }
+    
     void CAD::setSQL(String^ rq_sql)
     {
         if (rq_sql == "" || rq_sql == "RIEN")
@@ -52,5 +53,16 @@ namespace Composants
         {
             this->rq_sql = rq_sql;//SELECT/INSERT/UPDATE/CREATE
         }
+    }
+
+    //destructeur 
+    CAD::~CAD(void)
+    {
+        delete this->cnx;
+        delete this->rq_sql;
+        delete this->CNX;
+        delete this->DA;
+        delete this->DS;
+        delete this;
     }
 }
