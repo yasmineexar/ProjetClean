@@ -123,3 +123,11 @@ String^ Composant::Article::DELETE(void)
 	return "DELETE FROM Article " +
 		"WHERE(ID_article = " + this->getID_article() + ");";
 }
+
+Composant::Article::~Article()
+{
+	delete this->Reference_Article;
+	delete this->Designation;
+	delete this->Couleur;
+	delete this;
+}

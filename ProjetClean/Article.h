@@ -38,5 +38,6 @@ namespace Composant
 		String^ INSERT(void);
 		String^ UPDATE(void);
 		String^ DELETE(void);
+		~Article();
 	};
 }

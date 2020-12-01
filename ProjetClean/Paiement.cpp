@@ -117,3 +117,11 @@ int Composant::Paiement::getIdCommande(void)
 {
     return this->ID_Commande;
 }
+
+Composant::Paiement::~Paiement()
+{
+    delete this->Date_Paiement;
+    delete this->Date_ReglementSolde;
+    delete this->Moyen_Paiement;
+    delete this;
+}

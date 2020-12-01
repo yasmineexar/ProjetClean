@@ -20,6 +20,7 @@ namespace Composant {
 			int get_id_adresse();
 			void set_id_superieur(int id);
 			void set_id_adresse(int id);
+			~Personnel();
 	};
 }
 
