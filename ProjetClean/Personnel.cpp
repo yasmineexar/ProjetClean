@@ -7,6 +7,7 @@ namespace Composant {
         this->set_prenom("RIEN");
         this->set_id_adresse(-1);
         this->set_id_superieur(-1);
+        this->date_embauche = System::DateTime::Now;
     }
 
     String^ Composant::Personnel::SELECT()
