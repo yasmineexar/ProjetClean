@@ -5,9 +5,9 @@ using namespace System::Data::SqlClient;
 using namespace System::Xml;
 using namespace System;
 //Classe d'accèes aux données
-namespace NS_Composants
+namespace Composants
 {
-	ref class CL_CAD
+	ref class CAD
 	{
 	private:
 		String^ cnx; //chaine de caractère pour la connexion avec la base de données

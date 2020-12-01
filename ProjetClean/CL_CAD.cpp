@@ -1,9 +1,9 @@
 #include "CL_CAD.h"
 
-namespace NS_Composants
+namespace Composants
 {
     //le constructeur par défaut
-    CL_CAD::CL_CAD()
+    CAD::CAD()
     {
         this->rq_sql = "RIEN"; //initialiser la requete à RIEN
         //les informations de connexion à la base de données: le serveur; le nom de la BDD; le type de la sécurité
@@ -13,7 +13,7 @@ namespace NS_Composants
         this->CMD->CommandType = CommandType::Text;//définit le type de la commande à texte
     }
 
-    int CL_CAD::actionRowsID(String^ rq_sql)
+    int CAD::actionRowsID(String^ rq_sql)
     {
         int id;
         this->setSQL(rq_sql);
@@ -24,7 +24,7 @@ namespace NS_Composants
         return id;
     }//permet de récupérer l'ID courant
 
-    void CL_CAD::actionRows(String^ rq_sql)
+    void CAD::actionRows(String^ rq_sql)
     {
         this->setSQL(rq_sql);
         this->CMD->CommandText = this->rq_sql;
@@ -33,7 +33,7 @@ namespace NS_Composants
         this->CNX->Close();
     }
 
-    DataSet^ CL_CAD::getRows(String^ rq_sql, String^ dataTableName)
+    DataSet^ CAD::getRows(String^ rq_sql, String^ dataTableName)
     {
         this->setSQL(rq_sql);
         this->DA = gcnew SqlDataAdapter(this->CMD);
@@ -42,7 +42,7 @@ namespace NS_Composants
         this->DA->Fill(this->DS, dataTableName);//remplir le dataset avec la table spécifiée en exécutant la requete de commande
         return this->DS;
     }
-    void CL_CAD::setSQL(String^ rq_sql)
+    void CAD::setSQL(String^ rq_sql)
     {
         if (rq_sql == "" || rq_sql == "RIEN")
         {
