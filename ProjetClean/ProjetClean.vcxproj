@@ -124,6 +124,7 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Commande.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Paiement.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Personnel.cpp" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Paiement.h" />
     <ClInclude Include="Personne.h" />
     <ClInclude Include="Personnel.h" />
   </ItemGroup>

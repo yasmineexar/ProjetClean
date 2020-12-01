@@ -8,7 +8,7 @@ namespace Composant
 	private:
 		int ID_Adresse;
 		String^ adresse;
-		String^ Id_Ville;
+		int Id_Ville;
 
 	public:
 		Adresse(void);
@@ -18,10 +18,10 @@ namespace Composant
 		String^ DELETE(void);
 		void setIdAdresse(int);
 		void setAdresse(String^);
-		void setIdVille(String^);
+		void setIdVille(int);
 		int getIdAdresse(void);
 		String^ getAdresse(void);
-		String^ getIdVille(void);
+		int getIdVille(void);
 
 	};
 }
