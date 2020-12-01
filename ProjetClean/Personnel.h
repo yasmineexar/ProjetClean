@@ -1,6 +1,7 @@
 #pragma once
 #include "Personne.h"
 namespace Composant {
+	
 	ref class Personnel : public Personne
 	{
 		private:
