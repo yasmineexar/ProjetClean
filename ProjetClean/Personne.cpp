@@ -1,4 +1,6 @@
 #include "Personne.h"
+#include<iostream>
+using namespace std;
 namespace Composant {
     
 
@@ -39,21 +41,16 @@ namespace Composant {
 
     String^ Composant::Personne::SELECT(void)
     {
-        
     }
 
     String^ Composant::Personne::INSERT(void)
     {
-
     }
 
     String^ Composant::Personne::UPDATE(void)
     {
-
     }
-
     String^ Composant::Personne::DELETE(void)
     {
-
     }
 }
