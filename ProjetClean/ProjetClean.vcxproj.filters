@@ -51,6 +51,9 @@
     <ClCompile Include="Choisir.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Vivre.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="Choisir.h">
       <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Vivre.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

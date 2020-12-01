@@ -9,7 +9,7 @@ namespace Composant
 	}
 	String^ Choisir::SELECT(void)
 	{
-		return "SELECT Id_Article, Id_Commande,Quantite_Article,Remise " +
+		return "SELECT ID_Article, ID_Commande,Quantite_Article,Remise " +
 			"FROM Choisir " + ");";
 	}
 	String^ Choisir::INSERT(void)
@@ -20,14 +20,14 @@ namespace Composant
 	String^ Choisir::UPDATE(void)
 	{
 		return "UPDATE Choisir " +
-			"SET Id_Article ='" + this->Id_Article + "',  ='" + this->Id_Commande + "',  ='" + this->Quantité_Article + "',  ='" + this->Remise + "'";
+			"SET ID_Article ='" + this->Id_Article + "',  ='" + this->Id_Commande + "',  ='" + this->Quantité_Article + "',  ='" + this->Remise + "'";
 	}
 	String^ Choisir::DELETE(void)
 	{
 		return "DELETE FROM Choisir " +
-			"WHERE(Id_Article = " + this->Id_Article + "and Id_Commande = " + this->Id_Commande +")";
+			"WHERE(ID_Article = " + this->Id_Article + "and ID_Commande = " + this->Id_Commande +")";
 	}
-	void Choisir::setIdArticle(int Id_Artcle)
+	void Choisir::setIdArticle(int Id_Article)
 	{
 		if (Id_Article > 0)this->Id_Article = Id_Article;
 	}
