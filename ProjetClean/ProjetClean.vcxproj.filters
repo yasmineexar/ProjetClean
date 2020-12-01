@@ -30,6 +30,9 @@
     <ClCompile Include="Cmp_Client.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Cmp_Adresse.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -43,6 +46,9 @@
     </ClInclude>
     <ClInclude Include="Cmp_Client.h">
       <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmp_Adresse.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
