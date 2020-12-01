@@ -7,7 +7,7 @@ namespace Composant {
         this->set_prenom("RIEN");
         this->set_id_adresse(-1);
         this->set_id_superieur(-1);
-        this->date_embauche = System::DateTime::Now;
+        this->date_dembauche = System::DateTime::Now;
     }
 
     String^ Composant::Personnel::SELECT()
@@ -24,7 +24,7 @@ namespace Composant {
 
     String^ Composant::Personnel::UPDATE()
     {
-        return "UPDATE Personnel " + "SET Nom_P = '" + this->get_nom() + "', Prenom_P = '" + this->get_prenom() + "', Date_dembauche = " + date_to_string(this->date_embauche)  +",id_personnel_Supervise = "+this->get_id_superieur()+
+        return "UPDATE Personnel " + "SET Nom_P = '" + this->get_nom() + "', Prenom_P = '" + this->get_prenom() + "', Date_dembauche = " + date_to_string(this->get_date_embauche())  +",id_personnel_Supervise = "+this->get_id_superieur()+
             ",id_adresse = "+this->get_id_adresse()+"WHERE(ID_Client = " + this->get_id() + ");";
     }
 
@@ -36,12 +36,12 @@ namespace Composant {
 
     void Composant::Personnel::set_date_embauche(DateTime^ date)
     {
-        this->date_embauche = date;
+        this->date_dembauche = date;
     }
 
     DateTime^ Composant::Personnel::get_date_embauche()
     {
-        return this->date_embauche;
+        return this->date_dembauche;
     }
 
     int Composant::Personnel::get_id_superieur()
