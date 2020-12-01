@@ -129,4 +129,5 @@ Composant::Article::~Article()
 	delete this->Reference_Article;
 	delete this->Designation;
 	delete this->Couleur;
+	delete this;
 }

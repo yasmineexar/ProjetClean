@@ -63,6 +63,11 @@ namespace Composant {
     {
         this->id_adresse = id;
     }
+    Personnel::~Personnel()
+    {
+        delete this->date_dembauche;
+        delete this;
+    }
     String^ date_to_string(DateTime^ date) {
         return date->Year + "" + date->Month + "" + date->Day;
     }
