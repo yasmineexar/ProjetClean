@@ -2,7 +2,7 @@
 namespace Composant
 {
 	Adresse::Adresse(void) {
-		this->ID_Adresse = -1;
+		this->ID_Adresse =  -1;
 		this->adresse = "RIEN";
 		this->Id_Ville = -1;
 	}
