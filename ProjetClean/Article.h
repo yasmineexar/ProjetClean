@@ -1,5 +1,4 @@
 #pragma once
-using namespace System::Data::Sql;
 using namespace System;
 namespace Composant
 {
@@ -15,7 +14,8 @@ namespace Composant
 		int Seuil_de_reapprovisionnement;
 		String^ Couleur;
 	public:
-		Article();
+		Article(); //constructeur par défaut
+		//accesseurs
 		void SetID_article(int);
 		int getID_article(void);
 		void SetReference_article(String^);
@@ -30,5 +30,12 @@ namespace Composant
 		int getQuantite_en_Stock(void);
 		void setSeuil_de_reapprovisionnement(int);
 		int setQuantite_en_Stock(void);
+		void SetCouleur(String^);
+		String^ getCouleur(void);
+		//methode de mappage pour la table Article
+		String^ SELECT(void);
+		String^ INSERT(void);
+		String^ UPDATE(void);
+		String^ DELETE(void);
 	};
 }

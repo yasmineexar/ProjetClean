@@ -8,8 +8,9 @@ namespace Composant {
         this->id = 0;
         this->nom = "";
         this->prenom = "";
-        this->date_naiss = System::DateTime::MaxValue;
-        this->date_pr_achat = System::DateTime::MaxValue;
+        //initialiser les dates à la date actuelle
+        this->date_naiss = System::DateTime::Now;
+        this->date_pr_achat = System::DateTime::Now;
     }
 
     void Composant::Client::SetDate_naiss(System::DateTime^ date_naiss)
