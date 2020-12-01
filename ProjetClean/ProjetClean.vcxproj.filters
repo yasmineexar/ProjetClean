@@ -27,6 +27,9 @@
     <ClCompile Include="Personne.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -36,6 +39,9 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Personne.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>
