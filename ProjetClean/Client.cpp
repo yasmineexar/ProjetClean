@@ -6,8 +6,8 @@ namespace Composant {
     Composant::Client::Client()
     {
         this->id = -1;
-        this->nom = "";
-        this->prenom = "";
+        this->nom = "RIEN";
+        this->prenom = "RIEN";
         //initialiser les dates à la date actuelle
         this->date_naiss = System::DateTime::Now;
         this->date_pr_achat = System::DateTime::Now;

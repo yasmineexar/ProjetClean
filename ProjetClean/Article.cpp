@@ -2,13 +2,14 @@
 
 Composant::Article::Article()
 {
-	this->ID_article = 0;
-	this->Reference_Article = "";
-	this->Designation = "";
-	this->Prix_HT = 0.00;
-	this->Quantite_en_Stock = 0.00;
-	this->Seuil_de_reapprovisionnement = 0;
-	this->Couleur = "";
+	this->ID_article = -1;
+	this->Reference_Article = "RIEN";
+	this->Designation = "RIEN";
+	this->Prix_HT = -1.00;
+	this->Taux_TVA = -1.00;
+	this->Quantite_en_Stock = -1;
+	this->Seuil_de_reapprovisionnement = -1;
+	this->Couleur = "RIEN";
 }
 
 void Composant::Article::SetID_article(int ID_article)

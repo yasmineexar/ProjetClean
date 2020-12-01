@@ -1,7 +1,14 @@
 #include "Commande.h"
 namespace Composant {
 	Commande::Commande() {
-
+		this->date_emission = System::DateTime::Now;
+		this->date_livraison = System::DateTime::Now;
+		this->date_reglement_solde = System::DateTime::Now;
+		this->id_adresse_facturation = -1;
+		this->id_adresse_livraison = -1;
+		this->id_client = -1;
+		this->id_commande = -1;
+		this->ref = "RIEN";
 	}
 	void Commande::set_id_commande(int a) {
 		this->id_commande = a;

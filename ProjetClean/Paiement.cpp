@@ -5,7 +5,7 @@ Composant::Paiement::Paiement(void)
     this->ID_Paiement = -1;
     this->Date_Paiement = System::DateTime::Now;
     this->Date_ReglementSolde = System::DateTime::MaxValue;
-    this->Moyen_Paiement = "";
+    this->Moyen_Paiement = "RIEN";
     this->Montant_Total_HT = -1;
     this->ID_Client = -1;
     this->ID_Commande = -1;
