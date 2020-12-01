@@ -14,7 +14,7 @@ namespace Composant
 	String^ Adresse::INSERT(void)
 	{
 		return "INSERT INTO Adresse(adresse, ville) " +
-			"VALUES('" + this->adresse + "', '" + this->Id_Ville + ");";
+			"VALUES('" + this->adresse + "', '" + this->Id_Ville + ");select @@IDENTITY;";
 	}
 	String^ Adresse::UPDATE(void)
 	{

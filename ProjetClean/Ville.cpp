@@ -13,7 +13,7 @@ namespace Composant
 	String^ Ville::INSERT(void)
 	{
 		return "INSERT INTO Ville (Nom_Ville) " +
-			"VALUES('" + this->Nom_Ville + "');";
+			"VALUES('" + this->Nom_Ville + "');select @@Identity";
 	}
 	String^ Ville::UPDATE(void)
 	{

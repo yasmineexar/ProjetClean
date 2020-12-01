@@ -19,7 +19,7 @@ namespace Composant {
     String^ Composant::Personnel::INSERT()
     {
         return "INSERT INTO Personnel(Nom_P, Prenom_P, Date_dembauche,id_personnel_supervise,id_adresse)" +
-            "VALUES('" + this->get_nom() + "','" + this->get_prenom() + "'," + date_to_string(this->get_date_embauche()) + "," + this->get_id_superieur() + "," + this->get_id_adresse()+");";
+            "VALUES('" + this->get_nom() + "','" + this->get_prenom() + "'," + date_to_string(this->get_date_embauche()) + "," + this->get_id_superieur() + "," + this->get_id_adresse()+");Select @@IDENTITY;";
     }
 
     String^ Composant::Personnel::UPDATE()

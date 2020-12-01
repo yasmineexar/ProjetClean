@@ -66,9 +66,9 @@ namespace Composant {
 			"WHERE(ID_commande = " + this->get_id_commande() + ");";
 	}
 	System::String^ Commande::INSERT() {
-		return "insert into commande(id_commane,date_emission,reference,date_livraison,date_reglementsolde,id_client,id_adresse,id_adresse_facturation)" +
-			"values(" + this->get_id_commande() + "," + date_to_string(this->get_date_emission()) + ",'" + this->get_ref() + "'," + date_to_string(this->get_date_livraison()) + "," +
-			date_to_string(this->get_date_reglement_solde()) + "," + this->get_id_client() + "," + this->get_id_adresse_livraison() + "," + this->get_adresse_facturation() + ")";
+		return "insert into commande(date_emission,reference,date_livraison,date_reglementsolde,id_client,id_adresse,id_adresse_facturation)" +
+			"values(" + date_to_string(this->get_date_emission()) + ",'" + this->get_ref() + "'," + date_to_string(this->get_date_livraison()) + "," +
+			date_to_string(this->get_date_reglement_solde()) + "," + this->get_id_client() + "," + this->get_id_adresse_livraison() + "," + this->get_adresse_facturation() + ");select @@IDENTITY;";
 	}
 	System::String^ date_to_string(System::DateTime^ date) {
 		return date->Year + "" + date->Month + "" + date->Day;
