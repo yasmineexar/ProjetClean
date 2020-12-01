@@ -16,7 +16,7 @@ namespace Composant {
 			void set_date_embauche(DateTime^ date);
 			DateTime^ get_date_embauche();
 			int get_id_superieur();
-			int id_adresse();
+			int get_id_adresse();
 			void set_id_superieur(int id);
 			void set_id_adresse(int id);
 	};

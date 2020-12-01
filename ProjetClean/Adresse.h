@@ -3,7 +3,7 @@
 using namespace System;
 namespace Composant
 {
-	ref class Cmp_Adresse
+	ref class Adresse
 	{
 	private:
 		int ID_Adresse;
@@ -11,7 +11,7 @@ namespace Composant
 		String^ Id_Ville;
 
 	public:
-		Cmp_Adresse(void);
+		Adresse(void);
 		String^ SELECT(void);
 		String^ INSERT(void);
 		String^ UPDATE(void);

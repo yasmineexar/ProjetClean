@@ -30,6 +30,12 @@
     <ClCompile Include="Personnel.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="Adresse.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -42,6 +48,12 @@
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Personnel.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Adresse.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>

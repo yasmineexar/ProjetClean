@@ -119,16 +119,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAD.cpp" />
-    <ClCompile Include="Cmp_Adresse.cpp" />
-    <ClCompile Include="Cmp_Client.cpp" />
+    <ClCompile Include="Adresse.cpp" />
+    <ClCompile Include="Client.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personne.cpp" />
     <ClCompile Include="Personnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAD.h" />
-    <ClInclude Include="Cmp_Adresse.h" />
-    <ClInclude Include="Cmp_Client.h" />
+    <ClInclude Include="Adresse.h" />
+    <ClInclude Include="Client.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

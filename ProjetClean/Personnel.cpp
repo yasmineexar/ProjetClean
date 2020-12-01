@@ -2,59 +2,67 @@
 namespace Composant {
     Composant::Personnel::Personnel()
     {
+        this->set_id(-1);
+        this->set_nom("RIEN");
+        this->set_prenom("RIEN");
+        this->set_id_adresse(-1);
+        this->set_id_superieur(-1);
     }
 
     String^ Composant::Personnel::SELECT()
     {
-        
+        return "SELECT ID_Personnel, Nom_P, Prenom_P, Date_dembauche, id_personnel_supervise,id_adresse" +
+            "FROM Personnel;";
     }
 
     String^ Composant::Personnel::INSERT()
     {
-        throw gcnew System::NotImplementedException();
-        // TODO: insérer une instruction return ici
+        return "INSERT INTO Personnel(Nom_P, Prenom_P, Date_dembauche,id_personnel_supervise,id_adresse)" +
+            "VALUES('" + this->get_nom() + "','" + this->get_prenom() + "'," + date_to_string(this->get_date_embauche()) + "," + this->get_id_superieur() + "," + this->get_id_adresse()+");";
     }
 
     String^ Composant::Personnel::UPDATE()
     {
-        throw gcnew System::NotImplementedException();
-        // TODO: insérer une instruction return ici
+        return "UPDATE Personnel " + "SET Nom_P = '" + this->get_nom() + "', Prenom_P = '" + this->get_prenom() + "', Date_dembauche = " + date_to_string(this->date_embauche)  +",id_personnel_Supervise = "+this->get_id_superieur()+
+            ",id_adresse = "+this->get_id_adresse()+"WHERE(ID_Client = " + this->get_id() + ");";
     }
 
     String^ Composant::Personnel::DELETE()
     {
-        throw gcnew System::NotImplementedException();
-        // TODO: insérer une instruction return ici
+        return "DELETE FROM Personnel " +
+            "WHERE(ID_Personnel = " + this->get_id() + ");";
     }
 
     void Composant::Personnel::set_date_embauche(DateTime^ date)
     {
-        throw gcnew System::NotImplementedException();
+        this->date_embauche = date;
     }
 
     DateTime^ Composant::Personnel::get_date_embauche()
     {
-        throw gcnew System::NotImplementedException();
-        // TODO: insérer une instruction return ici
+        return this->date_embauche;
     }
 
     int Composant::Personnel::get_id_superieur()
     {
-        return 0;
+        return this->id_superieur;
     }
 
-    int Composant::Personnel::id_adresse()
+    int Composant::Personnel::get_id_adresse()
     {
-        return 0;
+        return this->id_adresse;
     }
 
     void Composant::Personnel::set_id_superieur(int id)
     {
-        throw gcnew System::NotImplementedException();
+        this->id_superieur = id;
     }
 
     void Composant::Personnel::set_id_adresse(int id)
     {
-        throw gcnew System::NotImplementedException();
+        this->id_adresse = id;
+    }
+    String^ date_to_string(DateTime^ date) {
+        return date->Year + "" + date->Month + "" + date->Day;
     }
 }
