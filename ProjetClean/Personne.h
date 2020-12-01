@@ -18,6 +18,11 @@ namespace Composant {
 			virtual String^ INSERT(void);
 			virtual String^ UPDATE(void);
 			virtual String^ DELETE(void);
+		protected:
+			~Personne() {
+				delete nom, prenom;
+				delete this;
+			}
 
 	};
 }

@@ -28,6 +28,12 @@ namespace Composant {
 			System::String^ UPDATE();
 			System::String^ DELETE();
 			System::String^ INSERT();
+		protected:
+			~Commande() {
+				delete date_emission, date_livraison, date_reglement_solde;
+				delete ref;
+				delete this;
+			}
 	};
 }
 
