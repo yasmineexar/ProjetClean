@@ -24,5 +24,9 @@ namespace Composant
 		int getIdCommande(void);
 		int getQuantiteArticle(void);
 		int getRemise(void);
+	protected:
+		~Choisir() {
+			delete this;
+		}
 	};
 }

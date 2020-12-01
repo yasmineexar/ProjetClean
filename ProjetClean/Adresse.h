@@ -21,6 +21,11 @@ namespace Composant
 		int getIdAdresse(void);
 		String^ getAdresse(void);
 		int getIdVille(void);
+	protected:
+		~Adresse() {
+			delete adresse;
+			delete this;
+		}
 
 	};
 }
