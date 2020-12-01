@@ -18,7 +18,7 @@ namespace Composants
 		DataSet^ DS; //prend en charge la création et la gestion des données 
 		void setSQL(String^); //modifier la valeur de la requete SQL
 	public:
-		CL_CAD(void); //contructeur par défaut
+		CAD(void); //contructeur par défaut
 		int actionRowsID(String^);
 		void actionRows(String^);
 		DataSet^ getRows(String^, String^);
