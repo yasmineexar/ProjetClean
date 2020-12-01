@@ -1,6 +1,6 @@
 #include "CAD.h"
 
-namespace Composants
+namespace Composant
 {
     //le constructeur par défaut
     CAD::CAD()
