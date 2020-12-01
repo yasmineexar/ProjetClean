@@ -5,7 +5,7 @@ namespace Composant {
 	ref class Personnel : public Personne
 	{
 		private:
-			DateTime^ date_embauche;
+			DateTime^ date_dembauche;
 			int id_superieur;
 			int id_adresse;
 		public:

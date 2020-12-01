@@ -23,7 +23,10 @@ int Composant::Article::getID_article(void)
 
 void Composant::Article::SetReference_article(String^ Reference_article)
 {
-	this->Reference_Article = Reference_article;
+	if (Reference_Article != "") 
+	{
+		this->Reference_Article = Reference_article;
+	}
 }
 
 String^ Composant::Article::getReference_article(void)
@@ -33,7 +36,10 @@ String^ Composant::Article::getReference_article(void)
 
 void Composant::Article::SetDesignation(String^ Designation)
 {
-	this->Designation = Designation;
+	if (Designation!="") 
+	{ 
+		this->Designation = Designation; 
+	}
 }
 
 String^ Composant::Article::getDesignation(void)
@@ -76,7 +82,7 @@ void Composant::Article::setSeuil_de_reapprovisionnement(int Seuil_de_reapprovis
 	this->Seuil_de_reapprovisionnement = Seuil_de_reapprovisionnement;
 }
 
-int Composant::Article::setQuantite_en_Stock(void)
+int Composant::Article::getSeuil_de_reapprovisionnement(void)
 {
 	return this->Seuil_de_reapprovisionnement;
 }
@@ -93,24 +99,26 @@ String^ Composant::Article::getCouleur(void)
 
 String^ Composant::Article::SELECT(void)
 {
-	return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat" +
-		"FROM Client;";
+	return "SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur" +
+		"FROM Article;";
 }
 
 String^ Composant::Article::INSERT(void)
 {
-	throw gcnew System::NotImplementedException();
-	// TODO: insérer une instruction return ici
+	return "INSERT INTO Article " +
+		"(Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur)" +
+		"VALUES('" + this->getReference_article() + "', '" + this->getDesignation() + "', '" + this->getTaux_TVA() + "','" + this->getQuantite_en_Stock() + "','" + this->getSeuil_de_reapprovisionnement() + "','" + this->getCouleur() + "');SELECT @@IDENTITY;";
 }
 
 String^ Composant::Article::UPDATE(void)
 {
-	throw gcnew System::NotImplementedException();
-	// TODO: insérer une instruction return ici
+	return "UPDATE Article " +
+		"SET Reference_Article = '" + this->getReference_article() + "', Designation = '" + this->getDesignation() + "', Prix_HT = '" + this->getPrix_HT() + "', Taux_TVA = '" + this->getTaux_TVA() + "', Quantite_en_Stock = '" + this->getQuantite_en_Stock() + "', Seuil_de_reapprovisionnement = '" + this->getSeuil_de_reapprovisionnement() + "', Couleur = '" + this->getCouleur() +"' " +
+		"WHERE(ID_article = " + this->getID_article() + ");";
 }
 
 String^ Composant::Article::DELETE(void)
 {
-	throw gcnew System::NotImplementedException();
-	// TODO: insérer une instruction return ici
+	return "DELETE FROM Article " +
+		"WHERE(ID_article = " + this->getID_article() + ");";
 }

@@ -1,4 +1,5 @@
 #pragma once
+//classe se mappage pour la table Article
 using namespace System;
 namespace Composant
 {
@@ -29,7 +30,7 @@ namespace Composant
 		void setQuantite_en_Stock(int);
 		int getQuantite_en_Stock(void);
 		void setSeuil_de_reapprovisionnement(int);
-		int setQuantite_en_Stock(void);
+		int getSeuil_de_reapprovisionnement(void);
 		void SetCouleur(String^);
 		String^ getCouleur(void);
 		//methode de mappage pour la table Article
