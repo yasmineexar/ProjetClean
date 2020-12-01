@@ -118,7 +118,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Article.cpp" />
     <ClCompile Include="CAD.cpp" />
     <ClCompile Include="Adresse.cpp" />
     <ClCompile Include="Client.cpp" />
@@ -127,7 +126,6 @@
     <ClCompile Include="Personnel.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="Adresse.h" />
     <ClInclude Include="Client.h" />
