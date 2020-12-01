@@ -30,10 +30,20 @@
     <ClCompile Include="Personnel.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Article.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmp_Adresse.cpp">
+      <Filter>Couche Composants</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmp_Client.cpp">
+=======
     <ClCompile Include="Client.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
     <ClCompile Include="Adresse.cpp">
+>>>>>>> a1eec0f3e56dd8984594ca199e72e1a431cb3545
       <Filter>Couche Composants</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +60,20 @@
     <ClInclude Include="Personnel.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="Article.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmp_Client.h">
+      <Filter>Couche Composants</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmp_Adresse.h">
+=======
     <ClInclude Include="Adresse.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
     <ClInclude Include="Client.h">
+>>>>>>> a1eec0f3e56dd8984594ca199e72e1a431cb3545
       <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>
