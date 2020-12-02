@@ -38,6 +38,7 @@ namespace Composant
 		String^ INSERT(void);
 		String^ UPDATE(void);
 		String^ DELETE(void);
+		String^ SELECTbyID(void);
 		~Article();
 	};
 }

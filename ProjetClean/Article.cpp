@@ -124,6 +124,13 @@ String^ Composant::Article::DELETE(void)
 		"WHERE(ID_article = " + this->getID_article() + ");";
 }
 
+String^ Composant::Article::SELECTbyID(void)
+{
+	"SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur" +
+		"WHERE(ID_article = " + this->getID_article() + ");";
+		"FROM Article;";
+}
+
 Composant::Article::~Article()
 {
 	delete this->Reference_Article;

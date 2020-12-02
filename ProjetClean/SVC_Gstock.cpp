@@ -1,4 +1,5 @@
 #include "SVC_Gstock.h"
+#include"Article.h"
 
 namespace Service
 {
@@ -13,71 +14,48 @@ namespace Service
 		this->dArticle = this->cad->getRows(this->article->SELECT());
 		return this->dArticle;
 	}
-	void SVC_Gemploye::afficher(int i)
+	void SVC_Gstock::afficher(int i)
 	{
-		//ja
-		this->personnel->set_id(i);
-		DataTable^ aa = this->cad->getRows(personnel->SELECTbyid());
-		this->personnel->set_id_adresse(Convert::ToInt32(aa->Rows[0]->ItemArray[5]));
-		String^ date = Convert::ToString(aa->Rows[0]->ItemArray[3]);
-		this->personnel->set_date_embauche(DateTime(Convert::ToInt32(date->Substring(0, 4)), Convert::ToInt32(date->Substring(4, 2)), Convert::ToInt32(date->Substring(6, 2))));
-		this->personnel->set_nom(Convert::ToString(aa->Rows[0]->ItemArray[1]));
-		this->personnel->set_prenom(Convert::ToString(aa->Rows[0]->ItemArray[2]));
-		this->personnel->set_id_superieur(Convert::ToInt32(aa->Rows[0]->ItemArray[4]));
-		adressesemploye();
+		this->article->SetID_article(i);
+		DataTable^ dArticle = this->cad->getRows(article->SELECTbyID());
+		this->article->SetID_article(Convert::ToInt32(dArticle->Rows[0]->ItemArray[1]));
+		this->article->SetReference_article(Convert::ToString(dArticle->Rows[0]->ItemArray[2]));
+		this->article->SetDesignation(Convert::ToString(dArticle->Rows[0]->ItemArray[3]));
+		this->article->setPrix_HT(Convert::ToInt32(dArticle->Rows[0]->ItemArray[4]));
+		this->article->setTaux_TVA(Convert::ToInt32(dArticle->Rows[0]->ItemArray[5]));
+		this->article->setQuantite_en_Stock(Convert::ToInt32(dArticle->Rows[0]->ItemArray[6]));
+		this->article->setSeuil_de_reapprovisionnement(Convert::ToInt32(dArticle->Rows[0]->ItemArray[7]));
+		this->article->SetCouleur(Convert::ToString(dArticle->Rows[0]->ItemArray[8]));
 	}
-	void SVC_Gemploye::adressesemploye()
-	{
-		DataTable^ dd = gcnew DataTable();
-		this->adresse->setIdAdresse(this->personnel->get_id_adresse());
-		dd = this->cad->getRows(this->adresse->SELECT());
-		this->adresse->setAdresse(Convert::ToString(dd->Rows[0]->ItemArray[1]));
-		this->adresse->setIdVille(Convert::ToInt32(dd->Rows[0]->ItemArray[1]));
-		this->ville->setIdVille(this->adresse->getIdVille());
-		dd = this->cad->getRows(this->ville->SELECTbyid());
-		this->ville->setNomVille(Convert::ToString(dd->Rows[0]->ItemArray[1]));
-	}
-	void SVC_Gemploye::ajouter(String^ nom, String^ prenom, System::DateTime^ date, int adresse, int ville, int superieur)
+	
+	void SVC_Gstock::ajouter(String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock,int Seuil, String^ Couleur)
 	{
 		int id;
-		this->personnel->set_nom(nom);
-		this->personnel->set_prenom(prenom);
-		this->personnel->set_date_embauche(date);
-		this->personnel->set_id_superieur(superieur);
-		this->personnel->set_id_adresse(adresse);
-		id = this->cad->actionRowsID(this->personnel->INSERTwithsup());
+		this->article->SetReference_article(Reference_Article);
+		this->article->SetDesignation(Designation);
+		this->article->setPrix_HT(Prix_HT);
+		this->article->setTaux_TVA(Taux_TVA);
+		this->article->setQuantite_en_Stock(Quantite_en_Stock);
+		this->article->setSeuil_de_reapprovisionnement(Seuil);
+		this->article->SetCouleur(Couleur);
+		id = this->cad->actionRowsID(this->article->INSERT());
 	}
-	void SVC_Gemploye::ajouter(String^ nom, String^ prenom, System::DateTime^ date, int adresse, int ville)
+	
+	void SVC_Gstock::modifier(int ID_Article, String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur)
 	{
-		int id;
-		this->personnel->set_nom(nom);
-		this->personnel->set_prenom(prenom);
-		this->personnel->set_date_embauche(date);
-		this->personnel->set_id_adresse(adresse);
-		id = this->cad->actionRowsID(this->personnel->INSERT());
+		this->article->SetID_article(ID_Article);
+		this->article->SetReference_article(Reference_Article);
+		this->article->SetDesignation(Designation);
+		this->article->setPrix_HT(Prix_HT);
+		this->article->setTaux_TVA(Taux_TVA);
+		this->article->setQuantite_en_Stock(Quantite_en_Stock);
+		this->article->setSeuil_de_reapprovisionnement(Seuil);
+		this->article->SetCouleur(Couleur);
+		this->cad->actionRows(this->article->UPDATE());
 	}
-	void SVC_Gemploye::modifier(int id_personne, String^ nom, String^ prenom, System::DateTime^ date, int adresse, int ville, int superieur)
+	void SVC_Gstock::supprimer(int ID_Article)
 	{
-		this->personnel->set_id(id_personne);
-		this->personnel->set_nom(nom);
-		this->personnel->set_prenom(prenom);
-		this->personnel->set_date_embauche(date);
-		this->personnel->set_id_adresse(adresse);
-		this->personnel->set_id_superieur(superieur);
-		this->cad->actionRows(this->personnel->UPDATEwithsup());
-	}
-	void SVC_Gemploye::modifier(int id_personne, String^ nom, String^ prenom, System::DateTime^ date, int adresse, int ville)
-	{
-		this->personnel->set_id(id_personne);
-		this->personnel->set_nom(nom);
-		this->personnel->set_prenom(prenom);
-		this->personnel->set_date_embauche(date);
-		this->personnel->set_id_adresse(adresse);
-		this->cad->actionRows(this->personnel->UPDATE());
-	}
-	void SVC_Gemploye::supprimer(int idPersonne)
-	{
-		this->personnel->set_id(idPersonne);
-		this->cad->actionRows(this->personnel->DELETE());
+		this->article->SetID_article(ID_Article);
+		this->cad->actionRows(this->article->DELETE());
 	}
 }
