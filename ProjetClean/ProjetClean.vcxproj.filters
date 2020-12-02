@@ -72,7 +72,7 @@
     <ClCompile Include="SVC_Gstatistique.cpp">
       <Filter>Couche Service</Filter>
     </ClCompile>
-    <ClCompile Include="SVC_Gpayement.cpp">
+    <ClCompile Include="SVC_Gpaiement.cpp">
       <Filter>Couche Service</Filter>
     </ClCompile>
   </ItemGroup>
@@ -128,7 +128,7 @@
     <ClInclude Include="SVC_Gstatistique.h">
       <Filter>Couche Service</Filter>
     </ClInclude>
-    <ClInclude Include="SVC_Gpayement.h">
+    <ClInclude Include="SVC_Gpaiement.h">
       <Filter>Couche Service</Filter>
     </ClInclude>
   </ItemGroup>
