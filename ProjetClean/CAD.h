@@ -5,7 +5,7 @@ using namespace System::Data::SqlClient;
 using namespace System::Xml;
 using namespace System;
 //Classe d'accèes aux données
-namespace Composant
+namespace Composants
 {
 	ref class CAD
 	{
