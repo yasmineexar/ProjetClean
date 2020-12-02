@@ -17,9 +17,11 @@ namespace Service {
 		this->dt = this->cad->getRows(this->client->SELECT());
 		return this->dt; 
 	}
-	void SVC_Gclient::afficher(int)
+	void SVC_Gclient::afficher(int id)
 	{
-		throw gcnew System::NotImplementedException();
+		this->client->set_id(id);
+		//DataTable^ c = this->cad->getRows(this->client->SELECTbyid());
+
 	}
 	void SVC_Gclient::ajouter(String^, String^, DateTime^, DateTime^)
 	{
