@@ -35,8 +35,7 @@ namespace Composant {
 
     String^ Composant::Client::SELECT(void)
     {
-        return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat" +
-            "FROM Client;";
+        return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat FROM Client";
     }
 
     String^ Composant::Client::INSERT(void)

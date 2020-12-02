@@ -1,6 +1,6 @@
 #include "CAD.h"
 
-namespace Composant
+namespace Composants
 {
     //le constructeur par défaut
     CAD::CAD()
@@ -33,13 +33,13 @@ namespace Composant
         this->CNX->Close();
     }
 
-    DataSet^ CAD::getRows(String^ rq_sql, String^ dataTableName)
+    DataTable^ CAD::getRows(String^ rq_sql)
     {
         this->setSQL(rq_sql);
         this->DA = gcnew SqlDataAdapter(this->CMD);
         this->CMD->CommandText = this->rq_sql;
-        this->DS = gcnew DataSet();
-        this->DA->Fill(this->DS, dataTableName);//remplir le dataset avec la table spécifiée en exécutant la requete de commande
+        this->DS = gcnew DataTable();
+        this->DA->Fill(this->DS);//remplir le datatable avec la table spécifiée en exécutant la requete de commande
         return this->DS;
     }
     

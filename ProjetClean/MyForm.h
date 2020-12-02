@@ -57,9 +57,12 @@ namespace ProjetClean {
 			this->ClientSize = System::Drawing::Size(647, 466);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
