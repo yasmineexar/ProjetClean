@@ -11,13 +11,13 @@ namespace Service {
 	private:
 		Composant::CAD^ cad;
 		Composant::Article^ article;
-		DataTable^ dArticle;
+		DataTable^ dt;
 	public:
 		SVC_Gstock();
 		DataTable^ listestock();
 		void afficher(int);
 		void ajouter(String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur);
-		void modifier(int, String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur);
+		void modifier(int id, String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur);
 		void supprimer(int);
 	};
 }
