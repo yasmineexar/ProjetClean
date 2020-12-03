@@ -20,6 +20,7 @@ namespace Composant
 		String^ INSERT(void);
 		String^ UPDATE(void);
 		String^ DELETE(void);
+		String^ SELECTbyID(void);
 		void setIdPaiement(int);
 		void setDatePaiement(DateTime^);
 		void setDate_ReglementSolde(DateTime^);

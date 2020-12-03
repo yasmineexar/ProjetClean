@@ -19,6 +19,6 @@ namespace Service {
 		void ajouter(String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur);
 		void modifier(int, String^ Reference_Article, String^ Designation, float Prix_HT, float Taux_TVA, int Quantite_en_Stock, int Seuil, String^ Couleur);
 		void supprimer(int);
-	}
-};
+	};
+}
 
