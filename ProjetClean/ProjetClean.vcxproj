@@ -131,7 +131,7 @@
     <ClCompile Include="SVC_Gclient.cpp" />
     <ClCompile Include="SVC_Gcommande.cpp" />
     <ClCompile Include="SVC_Gemploye.cpp" />
-    <ClCompile Include="SVC_Gpayement.cpp" />
+    <ClCompile Include="SVC_Gpaiement.cpp" />
     <ClCompile Include="SVC_Gstatistique.cpp" />
     <ClCompile Include="SVC_Gstock.cpp" />
     <ClCompile Include="Ville.cpp" />
@@ -153,7 +153,7 @@
     <ClInclude Include="SVC_Gclient.h" />
     <ClInclude Include="SVC_Gcommande.h" />
     <ClInclude Include="SVC_Gemploye.h" />
-    <ClInclude Include="SVC_Gpayement.h" />
+    <ClInclude Include="SVC_Gpaiement.h" />
     <ClInclude Include="SVC_Gstatistique.h" />
     <ClInclude Include="SVC_Gstock.h" />
     <ClInclude Include="Ville.h" />
