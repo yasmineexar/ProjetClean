@@ -7,12 +7,6 @@ namespace Service {
 	}
 	DataTable^ SVC_Gpaiement::Paiement()
 	{
-		throw gcnew System::NotImplementedException();
-		// TODO: insérer une instruction return ici
-	}
-	//une méthode qui retourne un DataTable contenant la liste des clients
-	DataTable^ SVC_Gpaiement::Paiement()
-	{
 		this->dt = gcnew DataTable();
 		this->dt = this->cad->getRows(this->paiement->SELECT());
 		return this->dt;
