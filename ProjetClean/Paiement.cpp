@@ -39,7 +39,7 @@ String^ Composant::Paiement::DELETE(void)
 
 String^ Composant::Paiement::SELECTbyID(void)
 {
-    "SELECT Id_Paiement, Date_Paiement, Date_ReglementSolde, Moyen_Paiement, Montant_Total_HT,Montant_Total_TVA,ID_Client,ID_Commande" +
+    return "SELECT Id_Paiement, Date_Paiement, Date_ReglementSolde, Moyen_Paiement, Montant_Total_HT,Montant_Total_TVA,ID_Client,ID_Commande" +
         "WHERE(ID_Paiment = " + this->getIdPaiement() + ");";
         "FROM Paiement;";
 }
