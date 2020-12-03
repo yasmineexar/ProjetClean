@@ -41,6 +41,11 @@ namespace Composant
 		if (Id_Ville > 0)this->Id_Ville = Id_Ville;
 	}
 
+	void Adresse::setIdClient(int)
+	{
+		if (ID_Client > 0)this->ID_Client = ID_Client;
+	}
+
 	int Adresse::getIdAdresse(void)
 	{
 		return this->ID_Adresse;
@@ -52,5 +57,9 @@ namespace Composant
 	int Adresse::getIdVille(void)
 	{
 		return this->Id_Ville;
+	}
+	int Adresse::getIdClient(void)
+	{
+		return this->ID_Client;
 	}
 }
