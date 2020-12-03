@@ -2,7 +2,7 @@
 using namespace System;
 namespace Composant
 {
-	ref class Choisir
+	ref class Ligne_Commande
 	{
 	private:
 		int Id_Article;
@@ -11,7 +11,7 @@ namespace Composant
 		float Remise;
 
 	public:
-		Choisir(void);
+		Ligne_Commande(void);
 		String^ SELECT(void);
 		String^ INSERT(void);
 		String^ UPDATE(void);
@@ -25,7 +25,7 @@ namespace Composant
 		int getQuantiteArticle(void);
 		int getRemise(void);
 	protected:
-		~Choisir() {
+		~Ligne_Commande() {
 			delete this;
 		}
 	};

@@ -125,6 +125,11 @@ int Composant::Paiement::getIdCommande(void)
     return this->ID_Commande;
 }
 
+float Composant::Paiement::calculMontantTotalTTC()
+{
+    return this->Montant_Total_HT*this->Montant_Total_TVA;
+}
+
 Composant::Paiement::~Paiement()
 {
     delete this->Date_Paiement;
