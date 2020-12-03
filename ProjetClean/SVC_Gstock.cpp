@@ -60,6 +60,6 @@ namespace Service
 		this->article->SetID_article(ID_Article);
 		this->cad->actionRows("BEGIN TRAN");
 		this->cad->actionRows(this->article->DELETE());
-		this->cad->actionRows("COMMIT");
+		this->cad->actionRows("COMMIT TRAN");
 	}
 }
