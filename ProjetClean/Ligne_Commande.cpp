@@ -59,4 +59,8 @@ namespace Composant
 	{
 		return this->Remise;
 	}
+	Ligne_Commande::~Ligne_Commande()
+	{
+		delete this;
+	}
 }

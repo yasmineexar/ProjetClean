@@ -17,6 +17,7 @@ namespace Composant
 		String^ UPDATE(void);
 		String^ DELETE(void);
 		String^ SELECTbyid(void);
+		String^ SELECTclient(void); //hadi zednaha
 		void setIdAdresse(int);
 		void setAdresse(String^);
 		void setIdVille(int);

@@ -25,8 +25,6 @@ namespace Composant
 		int getQuantiteArticle(void);
 		int getRemise(void);
 	protected:
-		~Ligne_Commande() {
-			delete this;
-		}
+		~Ligne_Commande();
 	};
 }
