@@ -51,9 +51,6 @@
     <ClCompile Include="Commande.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
-    <ClCompile Include="Choisir.cpp">
-      <Filter>Couche Composants</Filter>
-    </ClCompile>
     <ClCompile Include="Vivre.cpp">
       <Filter>Couche Composants</Filter>
     </ClCompile>
@@ -74,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="SVC_Gpaiement.cpp">
       <Filter>Couche Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Ligne_Commande.cpp">
+      <Filter>Couche Composants</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,9 +107,6 @@
     <ClInclude Include="Ville.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
-    <ClInclude Include="Choisir.h">
-      <Filter>Couche Composants</Filter>
-    </ClInclude>
     <ClInclude Include="Vivre.h">
       <Filter>Couche Composants</Filter>
     </ClInclude>
@@ -130,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="SVC_Gpaiement.h">
       <Filter>Couche Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Ligne_Commande.h">
+      <Filter>Couche Composants</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

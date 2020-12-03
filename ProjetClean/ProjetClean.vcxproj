@@ -121,7 +121,7 @@
     <ClCompile Include="Article.cpp" />
     <ClCompile Include="CAD.cpp" />
     <ClCompile Include="Adresse.cpp" />
-    <ClCompile Include="Choisir.cpp" />
+    <ClCompile Include="Ligne_Commande.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Commande.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -141,7 +141,7 @@
     <ClInclude Include="Article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="Adresse.h" />
-    <ClInclude Include="Choisir.h" />
+    <ClInclude Include="Ligne_Commande.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Commande.h" />
     <ClInclude Include="MyForm.h">

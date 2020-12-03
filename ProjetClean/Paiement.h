@@ -37,6 +37,7 @@ namespace Composant
 		float getMontantTotalTVA(void);
 		int getIdClient(void);
 		int getIdCommande(void);
-		~Paiement();
+		float calculMontantTotalTTC();
+			~Paiement();
 	};
 }

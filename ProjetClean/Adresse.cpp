@@ -5,11 +5,16 @@ namespace Composant
 		this->ID_Adresse =  -1;
 		this->adresse = "RIEN";
 		this->Id_Ville = -1;
+		this->ID_Client = -1;
 	}
 	String^ Adresse::SELECT(void)
 	{
 		return "SELECT id_adresse, adresse, Id_ville " +
 			"FROM Adresse " + ");";
+	}
+	String^ Adresse::SELECTbyid(void)
+	{
+		return "SELECT Adresse FROM Adresse WHERE ID_Client = " + this->ID_Client;
 	}
 	String^ Adresse::INSERT(void)
 	{

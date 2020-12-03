@@ -18,7 +18,6 @@ namespace Service {
 	DataTable^ SVC_Gclient::adressesClient(int)
 	{
 		this->dt = gcnew DataTable();
-
 		return dt;
 	}
 
