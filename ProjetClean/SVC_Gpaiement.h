@@ -12,13 +12,13 @@ namespace Service {
 	private:
 		Composant::CAD^ cad;
 		Composant::Paiement^ paiement;
-		DataTable^ dt;
+		DataTable^ dPaiement;
 
 	public:
 		SVC_Gpaiement();
 		DataTable^ Paiement();
 		void afficher(int);
-		void ajouter(int, DateTime^, DateTime^, String^, float, float, int, int);
+		void ajouter(DateTime^, DateTime^, String^, float, float, int, int);
 		void modifier(int, DateTime^, DateTime^, String^, float, float, int, int);
 		void supprimer(int);
 	};
