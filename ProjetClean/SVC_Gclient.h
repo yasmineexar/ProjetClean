@@ -12,7 +12,7 @@ namespace Service {
 	ref class SVC_Gclient
 	{
 	private:
-		Composants::CAD^ cad;
+		Composant::CAD^ cad;
 		Composant::Client^ client;
 		array<Composant::Adresse^>^ adrclient;
 		array<Composant::Ville^>^ ville;
