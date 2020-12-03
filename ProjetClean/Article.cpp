@@ -14,7 +14,7 @@ Composant::Article::Article()
 
 void Composant::Article::SetID_article(int ID_article)
 {
-	this->ID_article = ID_article;
+	if (ID_article > 0) this->ID_article = ID_article;
 }
 
 int Composant::Article::getID_article(void)
@@ -100,15 +100,14 @@ String^ Composant::Article::getCouleur(void)
 
 String^ Composant::Article::SELECT(void)
 {
-	return "SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur" +
-		"FROM Article;";
+	return "SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur FROM Article;";
 }
 
 String^ Composant::Article::INSERT(void)
 {
 	return "INSERT INTO Article " +
 		"(Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur)" +
-		"VALUES('" + this->getReference_article() + "', '" + this->getDesignation() + "', '" + this->getTaux_TVA() + "','" + this->getQuantite_en_Stock() + "','" + this->getSeuil_de_reapprovisionnement() + "','" + this->getCouleur() + "');SELECT @@IDENTITY;";
+		"VALUES('" + this->getReference_article() + "', '" + this->getDesignation() + "', '" + this->getPrix_HT() + "', '" + this->getTaux_TVA() + "','" + this->getQuantite_en_Stock() + "','" + this->getSeuil_de_reapprovisionnement() + "','" + this->getCouleur() + "');SELECT @@IDENTITY;";
 }
 
 String^ Composant::Article::UPDATE(void)
@@ -126,7 +125,7 @@ String^ Composant::Article::DELETE(void)
 
 String^ Composant::Article::SELECTbyID(void)
 {
-	"SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur" +
+	return "SELECT ID_article, Reference_Article, Designation, Prix_HT, Taux_TVA, Quantite_en_Stock, Seuil_de_reapprovisionnement, Couleur" +
 		"WHERE(ID_article = " + this->getID_article() + ");";
 		"FROM Article;";
 }
