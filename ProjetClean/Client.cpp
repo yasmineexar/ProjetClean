@@ -33,6 +33,11 @@ namespace Composant {
         return this->date_pr_achat;
     }
 
+    String^ Client::SELECTbyid(void)
+    {
+        return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat FROM Client WHERE ID_Client = " + this->get_id();
+    }
+
     String^ Composant::Client::SELECT(void)
     {
         return "SELECT ID_Client, Nom_C, Prenom_C, Date_de_naissance, Date_du_premier_achat FROM Client";

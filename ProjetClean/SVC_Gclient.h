@@ -14,13 +14,14 @@ namespace Service {
 	private:
 		Composant::CAD^ cad;
 		Composant::Client^ client;
-		/*Composant::Adresse^ adrclient;
-		Composant::Ville^ ville;*/
+		array<Composant::Adresse^>^ adrclient;
+		array<Composant::Ville^>^ ville;
 		DataTable^ dt;
 		
 	public:
 		SVC_Gclient();
 		DataTable^ listeclients();
+		DataTable^ adressesClient(int);
 		void afficher(int);
 		void ajouter(String^, String^, DateTime^, DateTime^);
 		void modifier(int, String^, String^, DateTime^, DateTime^);

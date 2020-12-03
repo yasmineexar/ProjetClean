@@ -14,6 +14,7 @@ namespace Composant {
 		void SetDate_pr_achat(System::DateTime^);
 		System::DateTime^ GetDate_pr_achat();
 		//methodes mappage table client
+		String^ SELECTbyid(void);
 		String^ SELECT(void) override;
 		String^ INSERT(void) override;
 		String^ UPDATE(void) override;
